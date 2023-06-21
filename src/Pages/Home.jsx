@@ -6,20 +6,23 @@ import Typewriter from 'typewriter-effect';
 import CardComponent from '../Components/CardComponent/CardComponent';
 import aboutMeLottie from "../assets/141491-3d-shape-animation.json"
 import allProjectsLottie from "../assets/130620-coding.json"
-import { blueGrey, grey } from '@mui/material/colors';
+import { Slide } from "react-awesome-reveal";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
 
 
 
-const signature= "https://i.ibb.co/QYBYmsn/Sadik-Sign-removebg-preview.png"
+const signature = "https://i.ibb.co/QYBYmsn/Sadik-Sign-removebg-preview.png"
 
 const Home = () => {
   return (
     <>
       {/* <Banner /> */}
       <div className="md:grid grid-rows-5 grid-flow-col gap-4">
-        <div className="row-span-6 md:flex items-center gap-4 col-span-3 border rounded-2xl shadow-md">
+        <div data-aos="zoom-in" className="row-span-6 md:flex items-center gap-4 col-span-3 border-2 rounded-2xl shadow-md">
           <Bounce>
-            <img className='w-48 rounded-tl-2xl rounded-br-2xl md:m-12 mx-auto' src="https://i.ibb.co/VgbS9F1/dog-puppy-on-garden-royalty-free-image-1586966191.jpg" alt="" />
+            <img className='w-48 rounded-tl-2xl rounded-br-2xl md:mx-12 mx-auto' src="https://i.ibb.co/VgbS9F1/dog-puppy-on-garden-royalty-free-image-1586966191.jpg" alt="" />
             <div className='flex-col justify-center items-center md:me-12 mx-auto'>
               <p className=' h-full text-2xl'>Hi, I am  </p>
               <span className='font-semibold text-4xl'>Sadik Ahmmed Tonmoy</span>
@@ -37,19 +40,21 @@ const Home = () => {
             </div>
           </Bounce>
         </div>
-        <div className="col-span-2 border rounded-2xl my-2 md:my-0 shadow-md">
-          <Marquee pauseOnHover={true} className='py-2 overflow-hidden'>
-            <p>| *As a web developer, I turn ideas into interactive realities, one line of code at a time* |</p>
-            <p>| *Web development is not just about creating websites; it's about crafting digital experiences that leave a lasting impact* |</p>
-            <p>| *Being a web developer means constantly embracing new technologies and adapting to ever-evolving digital landscapes | In the world of web development, I am the architect, engineer, and artist, building digital bridges between businesses and their audiences* |</p>
-          </Marquee>
-        </div>
-        <div className="row-span-5 col-span-2 md:flex gap-4">
-          <div className='md:w-6/12 '>
-            <CardComponent lottie={aboutMeLottie} title="Credentials" details="More About Me" pathName="/about"/>
+        <Slide direction="right" duration="1500">
+          <div className="col-span-2 border-2 rounded-2xl my-2 md:my-0 shadow-md">
+            <Marquee pauseOnHover={true} className='py-3 overflow-hidden'>
+              <p>| *As a web developer, I turn ideas into interactive realities, one line of code at a time* |</p>
+              <p>| *Web development is not just about creating websites; it's about crafting digital experiences that leave a lasting impact* |</p>
+              <p>| *Being a web developer means constantly embracing new technologies and adapting to ever-evolving digital landscapes | In the world of web development, I am the architect, engineer, and artist, building digital bridges between businesses and their audiences* |</p>
+            </Marquee>
           </div>
-          <div className='md:w-6/12'>
-          <CardComponent lottie={allProjectsLottie} title="My Projects" details="Showcase" pathName="/projects"/>
+        </Slide>
+        <div className="row-span-5 col-span-2 md:flex gap-4">
+          <div data-aos="zoom-in" className='md:w-6/12 '>
+            <CardComponent lottie={aboutMeLottie} title="Credentials" details="More About Me" pathName="/about" />
+          </div>
+          <div data-aos="zoom-in" className='md:w-6/12'>
+            <CardComponent lottie={allProjectsLottie} title="My Projects" details="Showcase" pathName="/projects" />
           </div>
         </div>
       </div>
