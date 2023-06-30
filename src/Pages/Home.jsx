@@ -6,7 +6,8 @@ import Typewriter from 'typewriter-effect';
 import CardComponent from '../Components/CardComponent/CardComponent';
 import aboutMeLottie from "../assets/141491-3d-shape-animation.json"
 import allProjectsLottie from "../assets/130620-coding.json"
-import skillsLottie from "../assets/40851-pentagram-skills-of-deth.json"
+import skillsLottie from "../assets/99312-developer-skills.json"
+import blogsLottie from "../assets/48849-blog-post.json"
 import { AwesomeButtonProgress } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import { Slide } from "react-awesome-reveal";
@@ -72,17 +73,19 @@ const Home = () => {
         </div>
       </div>
       {/*  2nd row */}
-      <div className='grid grid-cols-4 gap-4 grid-rows-3'>
+      <div className='md:grid grid-cols-4 gap-4 grid-rows-3'>
         <div data-aos="zoom-in" className='row-span-2'>
           <CardComponent lottie={skillsLottie} title="Skills" details="My Expertise" pathName="/skills"/>
         </div>
         <div className=' border col-span-2'>new</div>
         <div data-aos="zoom-in" className='row-span-2'>
-          <CardComponent lottie={skillsLottie} title="Blogs" details="My Digital diary" pathName="/blogs"/>
+          <CardComponent lottie={blogsLottie} title="Blogs" details="My Digital diary" pathName="/blogs"/>
         </div>
         <div className=' border'>new</div>
         <div className=' border'>new</div>
-        <div className=' border col-span-2'>new</div>
+        <div className='col-span-2'>
+          new
+        </div>
         <div className=' border'>new</div>
         <div className=' border'>new</div>
         <div className=' border'>new</div>
