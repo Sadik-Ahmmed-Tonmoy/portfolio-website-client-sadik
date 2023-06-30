@@ -22,7 +22,12 @@ const CardComponent = ({ lottie, title, details, pathName }) => {
           <p className='ms-4 opacity-40'>{details}</p>
         </div>
         <div>
-          <Link className='' to={pathName}><Button size="small" ><SiAudiomack className='h-10 w-7'/><TiArrowMaximiseOutline className='h-10 w-7'/></Button></Link>
+          <Link className='' to={pathName}>
+            <Button size="small" >
+              <SiAudiomack className='h-10 w-7' />
+              <TiArrowMaximiseOutline className='h-10 w-7' />
+            </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>
